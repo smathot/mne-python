@@ -126,3 +126,8 @@ def _check_n_jobs(n_jobs):
                 f'If n_jobs has a non-positive value ({n_jobs_orig}) it must '
                 f'not be less than the number of CPUs present ({n_cores})')
     return n_jobs
+
+
+# Alias for backwards compatibility. Unbreaks autoreject, which imports this
+# directly.
+check_n_jobs = _check_n_jobs
